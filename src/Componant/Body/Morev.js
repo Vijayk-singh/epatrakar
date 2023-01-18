@@ -28,7 +28,7 @@ const Morev = () => {
         <div className="flex flex-col">
             <div>
                 
-            <h2 className="font-bold">More V</h2>
+            <h2 className="font-bold">More Videos</h2>
             {articles.map((element) => {
                 return <div key={element.url}>
                  

@@ -1,0 +1,3 @@
+"@types/material-ui-popup-state": "latest",
+    "material-ui-popup-state": "latest",
+    "@mui/material": "^5.11.4",
