@@ -10,7 +10,7 @@ import { Viralv } from "./Body/Viralv";
 
 export const Body = () => {
   return (
-    <div className="border border-dark p-4">
+    <div className="border border-dark p-4 body">
 
       <div className="row trending">
         <Trending/>

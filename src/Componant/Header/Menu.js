@@ -1,21 +1,86 @@
 import React from 'react'
-import Nav from 'react-bootstrap/Nav';
+import { BsSearch } from "react-icons/bs";
 
 export const Menu = () => {
   return (
-    <div className=" text-center bg-danger p-3" >
-    <Nav >
-            <Nav.Link href="#features">Entertainment</Nav.Link>
-            <Nav.Link href="#pricing">Sports</Nav.Link>
-            <Nav.Link href="#pricing">Travel</Nav.Link>
-            <Nav.Link href="#pricing">History</Nav.Link>
-            <Nav.Link href="#pricing">News</Nav.Link>
-            <Nav.Link href="#pricing">Astrology</Nav.Link>
-            <Nav.Link href="#pricing">Trending</Nav.Link>
-            <Nav.Link href="#pricing">Weather</Nav.Link>
-            <Nav.Link href="#pricing">Lifestyle</Nav.Link>
-          </Nav>
-          </div>
+    <div className="row p-4 navb  search " id="">
+    {" "}
+    <div className="">
+    <div  className="row navb  align-content-center " id="navbarToggleExternalContent" >
 
+    <div class=" col-6 searchbar mb-4" >
+      <input
+        type="search"
+        class="form-control col"
+        placeholder="Search "
+        aria-label="Search"
+        aria-describedby="search-addon"
+      /></div>{" "}
+      <div className="col-1  BsSearch ">  <BsSearch size={18} /></div>
+     
+    
+     
+    
+    </div>
+    <div className="row ms-5 ps-5 text-white fs-6 nav2">
+      <div className="col-1  me-5 p-2"> <ul>
+      <li className="pb-3">
+        <a to="/">Entertainment</a>
+      </li>
+      <li>
+        <a>Astrology</a>
+      </li>
+    </ul></div>
+      <div className="col-1  me-5 p-2"> <ul>
+      <li className="pb-3">
+        <a to="/">Entertainment</a>
+      </li>
+      <li>
+        <a>Astrology</a>
+      </li>
+    </ul></div>
+      <div className="col-1  me-5 p-2"> <ul>
+      <li className="pb-3">
+        <a to="/">Entertainment</a>
+      </li>
+      <li>
+        <a>Astrology</a>
+      </li>
+    </ul></div>
+      <div className="col-1  me-5 p-2"> <ul>
+      <li className="pb-3">
+        <a to="/">Entertainment</a>
+      </li>
+      <li>
+        <a>Astrology</a>
+      </li>
+    </ul></div>
+      <div className="col-1  me-5 p-2"> <ul>
+      <li className="pb-3">
+        <a to="/">Entertainment</a>
+      </li>
+      <li>
+        <a>Astrology</a>
+      </li>
+    </ul></div>
+      <div className="col-1  me-5 p-2"> <ul>
+      <li className="pb-3">
+        <a to="/" >Entertainment</a>
+      </li>
+      <li>
+        <a>Astrology</a>
+      </li>
+    </ul></div>
+      <div className="col-1  me-5 p-2"> <ul>
+      <li className="pb-3">
+        <a to="/">Entertainment</a>
+      </li>
+      <li>
+        <a>Astrology</a>
+      </li>
+    </ul></div>
+    </div>
+    </div>
+    </div>
   )
 }

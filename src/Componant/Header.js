@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 // import Nav, { Nav1 } from './Header/Nav1'
@@ -9,14 +9,22 @@ import { Menu } from "./Header/Menu";
 import Nav from "react-bootstrap/Nav";
 import { BsSearch } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
-import  Nav1 from "./Header/Nav1";
+import { border } from "@mui/system";
+
 
 export const Header = () => {
   
-  const navg= "";
- const navbar =()=>{
-  navg ="collapse"
- }
+  const [expanded, setExpanded] = useState(false);
+  const [close, setClose] = useState(false);
+
+  function toggleSearch() {
+    setExpanded(!expanded);
+  }
+
+  function cross() {
+    setExpanded(close);
+  }
+
   return (
     <div className="">
       {/* <Nav1/> */}
@@ -30,7 +38,7 @@ export const Header = () => {
           aria-controls="navbarToggleExternalContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onClick={navbar}
+          onClick={toggleSearch}
         >
           {" "}
           <BsSearch size={25} />
@@ -70,87 +78,17 @@ export const Header = () => {
             <Nav.Link href="#pricing" className="text-white ms-3 me-3 fs-5">
               Lifestyle
             </Nav.Link>
+            {expanded && (
+              <a
+                
+                onClick={cross}
+                style={{ cursor: "pointer", fontWeight:"bold", fontSize:"20px", color:"white"}}
+              >X</a>
+            )}
           </Nav>
         </div>
-        <div className="row p-4 navb  search " id="">
-          {" "}
-          <div className={navg}>
-          <div  className="row navb  align-content-center " id="navbarToggleExternalContent" >
-
-          <div class=" col-6 searchbar mb-4" >
-            <input
-              type="search"
-              class="form-control col"
-              placeholder="Search "
-              aria-label="Search"
-              aria-describedby="search-addon"
-            /></div>{" "}
-            <div className="col-1  BsSearch ">  <BsSearch size={18} /></div>
-           
-          
-           
-          
-          </div>
-          <div className="row ms-5 ps-5 text-white fs-6">
-            <div className="col-1  me-5 p-2"> <ul>
-            <li className="pb-3">
-              <a to="/">Entertainment</a>
-            </li>
-            <li>
-              <a>Astrology</a>
-            </li>
-          </ul></div>
-            <div className="col-1  me-5 p-2"> <ul>
-            <li className="pb-3">
-              <a to="/">Entertainment</a>
-            </li>
-            <li>
-              <a>Astrology</a>
-            </li>
-          </ul></div>
-            <div className="col-1  me-5 p-2"> <ul>
-            <li className="pb-3">
-              <a to="/">Entertainment</a>
-            </li>
-            <li>
-              <a>Astrology</a>
-            </li>
-          </ul></div>
-            <div className="col-1  me-5 p-2"> <ul>
-            <li className="pb-3">
-              <a to="/">Entertainment</a>
-            </li>
-            <li>
-              <a>Astrology</a>
-            </li>
-          </ul></div>
-            <div className="col-1  me-5 p-2"> <ul>
-            <li className="pb-3">
-              <a to="/">Entertainment</a>
-            </li>
-            <li>
-              <a>Astrology</a>
-            </li>
-          </ul></div>
-            <div className="col-1  me-5 p-2"> <ul>
-            <li className="pb-3">
-              <a to="/" >Entertainment</a>
-            </li>
-            <li>
-              <a>Astrology</a>
-            </li>
-          </ul></div>
-            <div className="col-1  me-5 p-2"> <ul>
-            <li className="pb-3">
-              <a to="/">Entertainment</a>
-            </li>
-            <li>
-              <a>Astrology</a>
-            </li>
-          </ul></div>
-          </div>
-          </div>
-        </div>
+        {expanded && <Menu/>}
+        
       </div>
     </div>
   );
